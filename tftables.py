@@ -278,6 +278,7 @@ class FileReader:
 
             while True:
                 guard = queue.get()
+                print(guard.idx_op())
                 if guard is mtb.QueueClosed:
                     if kw_args['ordered']:
                         remainder = self.streamer.get_remainder(path, block_size)
